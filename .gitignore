@@ -2,6 +2,7 @@
 *~
 *.swap
 *.dump
+*.dot
 *.png
 *.jpg
 *.avi
@@ -10,3 +11,4 @@
 */__pycache__
 */.directory
 src/learn/model
+!src/learn/test/*

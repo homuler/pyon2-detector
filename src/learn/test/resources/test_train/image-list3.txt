@@ -1,0 +1,3 @@
+resources/test_train/dataset3/in/test1.png 0
+resources/test_train/dataset3/in/test2.png 1
+
