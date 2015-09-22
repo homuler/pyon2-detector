@@ -10,5 +10,5 @@
 *.mp4
 */__pycache__
 */.directory
-src/learn/model
-!src/learn/test/*
+src/model
+resources/
