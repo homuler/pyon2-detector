@@ -79,8 +79,8 @@ learnParser.set_defaults(func=learn)
 
 visualizeParser = subparsers.add_parser('visualize')
 visualizeParser.add_argument('--input', help='path to a log file')
-visualizeParser.add_argument('--acc', help='path to accuracy data image')
-visualizeParser.add_argument('--loss', help='path to loss data image')
+visualizeParser.add_argument('--acc', default='accuracy.png', help='path to accuracy data image')
+visualizeParser.add_argument('--loss', default='loss.png', help='path to loss data image')
 visualizeParser.set_defaults(func=visualizeLog)
 
 detectParser = subparsers.add_parser('detect')
