@@ -6,7 +6,7 @@ from nose.tools import raises
 class TestDetector:
    @classmethod
    def setup_class(clazz):
-      clazz.root = 'resources/test_util'
+      clazz.root = ''
       clazz.exp = 0.000000001
       clazz.detector = detector.Detector(os.path.join(clazz.root, 'model.dump'),
                                 os.path.join(clazz.root, 'mean.npy'), gpu=-1)

@@ -5,7 +5,7 @@ from util import loader
 class TestLoaderCpu:
    @classmethod
    def setup_class(clazz):
-      clazz.root = 'resources/test_util'
+      clazz.root = ''
 
    @classmethod
    def teardown_class(clazz):

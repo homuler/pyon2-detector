@@ -42,7 +42,7 @@ def learn(args):
 
 def detect(args):
     d = detector.Detector(args.model, args.mean, args.gpu)
-    d.sliding_window(args.input, [(48, 16), (72, 24), (144, 48)], output=args.output, confidence=0.9)
+    d.sliding_window(args.input, [(48, 16), (72, 24), (144, 48), (270, 72)], output=args.output, confidence=0.9)
 
 def visualizeLog(args):
     visualizer.save_accuracy_curve(args.input, args.acc)

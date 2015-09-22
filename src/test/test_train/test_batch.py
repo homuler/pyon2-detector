@@ -4,7 +4,7 @@ from nose.tools import raises, nottest
 from train import batch
 from util import loader
 from chainer import optimizers
-from network.sample import SampleNet
+from network.frgnet64 import FrgNet64
 
 class TestBatch:
    @classmethod
@@ -13,7 +13,7 @@ class TestBatch:
       meanpath = os.path.join(clazz.root, 'mean.npy')
       trainlist = os.path.join(clazz.root, 'image-list3.txt')
       validlist = os.path.join(clazz.root, 'image-list3.txt')
-      model = SampleNet() 
+      model = FrgNet64() 
       optimizer = optimizers.SGD()
       clazz.trainer = batch.Trainer(trainlist, validlist, meanpath, 
                                      model, optimizer)

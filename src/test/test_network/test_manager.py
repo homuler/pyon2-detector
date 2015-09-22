@@ -4,7 +4,7 @@ from nose.tools import raises, nottest
 from train import batch
 from util import loader
 from chainer import optimizers
-from network.sample import SampleNet
+from network.frgnet64 import FrgNet64
 from network.manager import NetSet
 
 class TestNetSet:
@@ -14,7 +14,7 @@ class TestNetSet:
       imglist = os.path.join(clazz.root, 'image-list3.txt')
       clazz.dataset = loader.load_image_list(imglist)
       meanpath = os.path.join(clazz.root, 'mean.npy')
-      model = SampleNet() 
+      model = FrgNet64() 
       clazz.hypernet = NetSet(meanpath, model)
 
    @classmethod

@@ -105,7 +105,7 @@ class Detector(NetSet):
       sum = 0
       for size, stride in sizes:
          sum += ((w - size + stride - 1) // stride) * ((h - size + stride - 1) // stride)
-      print(sum)
+      print(sum, 'patterns cropped.')
       insize = self.model.insize
       pos = np.ndarray(
          (sum, 4), dtype=np.int32)
