@@ -24,18 +24,20 @@ def genmean(args):
    dataset.create_mean(args.train, args.output)
 
 def learn(args):
-   batchsize = 10
+   batchsize = 20
    max_epoch = 30
    model = None
+   print('model initializing...')
    if args.model == "frg64":
       model = FrgNet64()
    elif args.model == "frg128":
       model = FrgNet128()
    optimizer = optimizers.MomentumSGD(lr=0.005, momentum=0.9)
+   print('trainer initializing...')
    trainer = batch.Trainer(args.train, args.valid, args.mean, model, 
                            optimizer, 0.0001, args.gpu)
 
-   trainer.train_random(batchsize, lr_decay=0.95, valid_interval=1000, 
+   trainer.train_random(batchsize, lr_decay=0.98, valid_interval=1000, 
                         model_interval=5, log_interval=20, max_epoch=max_epoch)
 
 def detect(args):

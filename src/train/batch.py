@@ -16,10 +16,7 @@ class Trainer(NetSet):
       self.validset = loader.load_image_list(validlist)
       self.optimizer = optimizer
       self.wd_rate = weight_decay
-      if gpu >= 0:
-         cuda.init(gpu)
-         self.model.to_gpu()
-      optimizer.setup(model.collect_parameters())
+      optimizer.setup(model)
       print('set up')
 
    def train_random(self, batchsize, lr_decay=0.1, valid_interval=500, 

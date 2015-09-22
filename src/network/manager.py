@@ -12,7 +12,8 @@ class NetSet:
       self.gpu = gpu
       self.insize = model.insize
       if gpu >= 0:
-         cuda.init(gpu)
+         cuda.check_cuda_available()
+         cuda.get_device(gpu).use()
          self.model.to_gpu()
 
    def calc_max_label(self, prob_arr):
