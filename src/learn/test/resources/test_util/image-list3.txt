@@ -1,3 +1,0 @@
-test1.png 0
-test2.png 1
-

@@ -8,7 +8,8 @@
 *.avi
 *.m4v
 *.mp4
-*/__pycache__
+**/__pycache__
 */.directory
+*/*.txt
 src/model
 resources/
