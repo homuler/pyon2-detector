@@ -36,6 +36,6 @@ place dataset like this.
 ```
 
 ## Reqirements
-1. chainer
+1. chainer >= 1.3.0
 1. OpenCV >= 3.0
 
